@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Puma Test Suite">
+
+    <test  verbose="2" preserve-order="true" name="test1">
+
+        <classes>
+            <class name="page_object_model.tests.PumaTest">
+                <methods>
+
+
+
+                </methods>
+            </class>
+            <class name="page_object_model.tests.LoginTest">
+                <methods>
+
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+    <test parallel="methods" thread-count="2" verbose="2" preserve-order="true" name="test2">
+        <classes>
+            <class name="page_object_model.tests.CategorySelectionTest">
+                <methods>
+                    <include name="testSelectWomenDressesAndOpenColorDropdown"/>
+                    <include name="testSelectMensSweatshirts"/>
+
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
